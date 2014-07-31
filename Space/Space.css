@@ -1,0 +1,34 @@
+#ship_display, #bullet_display, #bg_display, #enemy_display{
+	position: absolute;
+	margin: auto;	
+	left: 0;
+	right: 0;
+}
+
+#bg_display{
+	z-index: -3;
+}
+
+#score{
+	position: absolute;
+	margin: auto;
+	font-size: 2em;
+	text-align: center;
+	left:0;
+	right:0;
+	color: white;
+	font-family: courier;
+	z-index: 3;
+}
+
+#state{
+	position:absolute;
+	margin:auto;
+	font-size:3em;
+	text-align: center;
+	left:0;
+	right:0;
+	top: 300px;
+	z-index: 3;
+	font-family: courier;
+}
