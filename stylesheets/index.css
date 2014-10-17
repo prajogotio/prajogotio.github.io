@@ -1,0 +1,121 @@
+* {
+    font-family: helvetica;
+    font-weight: lighter;
+    border-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+}
+
+.Container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+}
+
+.Heading {
+    display: flex;
+    margin: 10px 0 0 0;
+}
+
+.MyName {
+    width: 20%;
+    font-size: 1.6em;
+    text-align: right;
+    padding: 20px 25px 20px 5px;
+    border-right: 1px solid rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    
+}
+
+.Menu {
+    display: flex;
+    justify-content: flex-end;
+    width: 80%;
+    font-size: 1.3em;
+    padding: 20px 25px 20px 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.Options {
+    margin-right: 23px;
+}
+
+.Motto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 120px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.Profession {
+    font-size: 2.5em;
+    margin-top: 90px;
+}
+
+.Caption {
+    width: 90%;
+    font-size: 1.5em;
+    margin-top: 23px;
+    text-align: center;
+}
+
+.DataStructureOption, .ProjectOption, .Contact {
+    display: flex;
+    flex-direction: column;
+}
+
+.Header {
+    font-size: 1.7em;
+    margin-top: 90px;
+    padding-bottom: 13px;
+    padding-right: 60px;
+    text-align: right;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.BigMenu {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 20px 90px 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.BigOption {
+    width: 160px;
+    height: 160px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    padding: 20px 20px 20px 20px;
+    margin-left: 20px;
+}
+.BigOption div:nth-child(1) {
+    margin-top:30px;
+    text-align: center;
+    font-size: 2em;
+}
+.BigOption div:nth-child(2) {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+.AboutMe {
+    padding: 30px 30px 40px 50px;
+    font-size: 1.2em;
+    text-align: right;
+}

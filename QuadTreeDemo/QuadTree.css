@@ -1,0 +1,18 @@
+* {
+    font-family: helvetica, arial;
+    font-weight: lighter;
+}
+
+.Container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    diplay: flex;
+    flex-direction: column;
+    width: 640px;
+}
+
+.Heading {
+    text-align: center;
+}
