@@ -53,6 +53,7 @@ body {
 
 .Options {
     margin-right: 23px;
+    padding: 20px;
 }
 
 .Motto {
@@ -78,11 +79,15 @@ body {
 .DataStructureOption, .ProjectOption, .Contact {
     display: flex;
     flex-direction: column;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    
 }
 
 .Header {
     font-size: 1.7em;
     margin-top: 90px;
+    width: 80%;
+    align-self: center;
     padding-bottom: 13px;
     padding-right: 60px;
     text-align: right;
@@ -92,8 +97,9 @@ body {
 .BigMenu {
     display: flex;
     flex-wrap: wrap;
+    width: 80%;
+    align-self: center;
     padding: 20px 20px 90px 20px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 .BigOption {
@@ -115,7 +121,19 @@ body {
 }
 
 .AboutMe {
-    padding: 30px 30px 40px 50px;
-    font-size: 1.2em;
+    padding: 30px 56px 70px 50px;
+    font-size: 1.4em;
     text-align: right;
+}
+
+.Footer {
+    border-top: 1px solid black;
+    padding-top: 40px;
+    padding-bottom: 14px;
+    font-size: 1.3em;
+}
+
+a:hover *{
+    background-color: black;
+    color: white;
 }

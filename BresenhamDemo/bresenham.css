@@ -1,0 +1,14 @@
+* {
+    font-family: helvetica;
+    font-weight: lighter;
+}
+
+.Wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#display {
+    border: 1px solid black;
+}
