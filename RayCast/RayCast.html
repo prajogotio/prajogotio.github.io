@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+    <script src="RayCast.js"></script>
+    <style>
+        #display, #bg {
+            position:absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+        }
+        #bg {
+            z-index: -1;
+        }
+        * {
+            font-family: helvetica;
+            font-weight: lighter;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1> Ray Casting Test </h1>
+    <canvas height="480" width="640" id="display">
+    </canvas>
+    <canvas height="480" width="640" id="bg">
+    </canvas>
+</body>
+</html>
