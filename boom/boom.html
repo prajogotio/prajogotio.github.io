@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+    <script src="boom.js"></script>
+    <script src="maths.js"></script>
+    <style>
+        #maze, #enemy, #player, #background {
+            position: absolute;
+            border: 1px solid black;
+            margin: auto;
+            left: 0;
+            right: 0;
+        }
+        #background {
+            z-index: -1;
+        }
+        #maze {
+            z-index: 0;
+        }
+        #enemy {
+            z-index: 1;
+        }
+        #player {
+            z-index: 2;
+        }
+        .Config {
+            font-family: helvetica;
+            font-weight: lighter;
+            font-size: 1em;
+            position: absolute;
+            left : 0;
+            top : 37%;
+            width: 90px;
+            text-align: center;
+        }
+        .startButton{
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            font-family: arial;
+            font-size: 2em;
+            font-weight: 900;
+            background-color: red;
+            color: white;
+            border-radius: 20px;
+            width: 300px;
+            height: 200px;
+            z-index: 3;
+            text-align: center;
+            cursor: pointer;
+        }
+        .title {
+            position: absolute;
+            font-size: 2em;
+            right: 10px;
+            top: 30%;
+            font-family: arial;
+            font-weight: 900;
+            border-radius: 7px;
+            width: 40px;
+            background-color: red;
+            color: white;
+            text-align: center;
+        }
+        .side {
+            position: absolute;
+            font-size: 1em;
+            left: 0px;
+            bottom: 40px;
+            
+            font-family: helvetica;
+            font-weight: 300;
+            width: 90px;
+            color: black;
+            text-align: center;
+        } 
+    </style>
+<body>
+    <canvas width="1024" height="640" id="background">
+    </canvas>
+    <canvas width="1024" height="640" id="maze">
+    </canvas>
+    <canvas width="1024" height="640" id="enemy">
+    </canvas>
+    <canvas width="1024" height="640" id="player">
+    </canvas>
+    <div class="Config">
+        <div>
+            <b>CONFIG</b> <br>
+        </div>
+        <div>
+            Navigation:<b> W, A, S, D</b>
+            Rotate Camera: <b>MOUSE</b>
+        </div>
+        <div>
+            Shoot:<b> LEFT CLICK</b>
+        </div>
+        <div>
+            Reload:<b> R </b>
+        </div>
+        <div>
+            Stop Game:<b> P </b>
+        </div>
+    </div>
+    <div class="startButton" id="startButton">
+        <h1> BOOM </h1>
+        <p>Click To Start!</p>
+    </div>
+    <div class="title">
+        B<br>O<br>O<br>M<br>
+    </div>
+    <div class="side">Written by: Prajogo Tio, 2014. Credits to the original owners of all assets used.</div>
+</body>
+</html>
