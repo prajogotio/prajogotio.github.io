@@ -771,6 +771,8 @@ function initializePlayerStatus() {
     player.y = 150;
     player.alpha = 90;
     player.isDead = false;
+    player.mouseX = 512;
+    player.horizon = 300;
     player.DOM.clearRect(0, 0, maze.canvas.width, maze.canvas.height);
     player.DOM.drawImage(assets.cache.playerArm, 212, 240, 900, 400);
     player.DOM.drawImage(assets.cache.crossHair, 460, 260, 100, 100);
