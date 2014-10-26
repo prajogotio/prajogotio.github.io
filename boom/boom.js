@@ -136,9 +136,13 @@ function playerAttackedEventHandler() {
         player.DOM.font = "70px Times";
         player.DOM.fillText("Wasted", 400, 200);
         player.DOM.font = "40px Times";
-        player.DOM.fillText("Reload Page for Another Try", 290, 400);
+        player.DOM.fillText("Your soul belongs to the BOOM", 290, 400);
         setTimeout(function(){
-            stopGame();
+            exitGameLoop();
+            setTimeout(function(){
+                startButton.innerHTML = "<h1>BOOM</h1> Click to Try Again";
+                startButton.style.setProperty('display', 'block');
+            }, 1000);
         }, 500);
     }
 };
@@ -642,6 +646,7 @@ function EnemyFactory(given_pos_x, given_pos_y, type, status) {
 }
 
 function addNewEnemy(type) {
+    enemyList = [];
     var cnt = 150;
     for (var i = 7; i < maze.map.row; ++i){
         for (var j = 0; j < maze.map.col; ++j){
@@ -704,6 +709,14 @@ function registerEventListeners(){
     document.addEventListener('mouseup', player);
 }
 
+function deregisterEventListeners(){
+    document.removeEventListener('keydown', player);
+    document.removeEventListener('keyup', player);
+    document.removeEventListener('mousemove', player);
+    document.removeEventListener('mousedown', player);
+    document.removeEventListener('mouseup', player);
+}
+
 function loadAssets() {
     var queue = [];
     //queue.push({path:'assets/wall_texture.jpg', name:'textureMap'});
@@ -740,17 +753,8 @@ function assetDownloadedHandle() {
     }
     startButton.innerHTML = "<h1> BOOM </h1><p>Click To Start!</p>";
     startButton.addEventListener('mousedown', function() {
-        registerEventListeners();
-        initializePlayerStatus();
-        addNewEnemy();
-        drawBackground();
-        gameAnimationLoop = setInterval(function(){ 
-            game.render();
-            player.update();
-            enemyUpdater();
-        }, 1000/60);
+        enterGameLoop();
         startButton.style.setProperty('display', 'none');
-        document.body.style.setProperty('cursor', 'none');
     });
 }
 
@@ -761,6 +765,13 @@ function initializePlayerStatus() {
     player.reloadRate = 5;
     player.score = 0;
     player.lastShoot = Date.now() - 912;
+    player.command = {};
+    player.isShooting = false;
+    player.x = 12 * 96;
+    player.y = 150;
+    player.alpha = 90;
+    player.isDead = false;
+    player.DOM.clearRect(0, 0, maze.canvas.width, maze.canvas.height);
     player.DOM.drawImage(assets.cache.playerArm, 212, 240, 900, 400);
     player.DOM.drawImage(assets.cache.crossHair, 460, 260, 100, 100);
     displayHealthBar();
@@ -817,7 +828,13 @@ function stopGame() {
     player.DOM.fillText("Stopped", 400, 200);
     player.DOM.font = "40px Times";
     player.DOM.fillText("Reload Page to Play Again", 290, 400);
+    exitGameLoop();
+}
+
+function exitGameLoop() {
     clearInterval(gameAnimationLoop);
+    deregisterEventListeners();
+    document.body.style.setProperty('cursor', 'default');
 }
 
 function drawBackground() {
@@ -962,7 +979,20 @@ function gameIsWon() {
     player.DOM.fillText("Congrats!", 400, 200);
     player.DOM.font = "40px Times";
     player.DOM.fillText("You have escaped the BOOM!", 290, 400);
-    clearInterval(gameAnimationLoop);
+    exitGameLoop();
+}
+
+function enterGameLoop() {
+    registerEventListeners();
+    initializePlayerStatus();
+    addNewEnemy();
+    drawBackground();
+    gameAnimationLoop = setInterval(function(){ 
+        game.render();
+        player.update();
+        enemyUpdater();
+    }, 1000/60);
+    document.body.style.setProperty('cursor', 'none');
 }
 
 document.addEventListener("DOMContentLoaded", function() {
