@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+    <script src="quadtree.js"></script>
+    <style>
+    .Canvas {
+        position:absolute;
+        left:0;
+        right:0;
+        top: 160px;
+        margin:auto;
+    }
+    * {
+        font-weight: 300;
+        font-family : helvetica;
+    }
+    .header {
+        position:absolute;
+        left:0;
+        right:0;
+        width: 600px;
+        text-align: center;
+        margin: auto;
+    }
+    </style>
+</head>
+<body>
+    <div class="header">
+    <h1> Destructible Terrain Demo </h1>
+    <h4> Implementation of QuadTree for Destructible Terrain Rendering </h4>
+    <p> Click and drag on the "Dirt" below to remove the dirt and see QuadTree in action! </p>
+    </div>
+    <canvas id="display" height="512" width="512" class="Canvas">
+    </canvas>
+</body>
+</html>
