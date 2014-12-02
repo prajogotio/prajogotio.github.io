@@ -18,6 +18,10 @@ var DataStructures = [
 ];
 
 var Projects = [
+    { url : "deterra/deterra.html",
+      title : "Deterra",
+      caption : "Destructible Quadtree Game",
+    },
     { url : "Space/Space.html",
       title : "Space Game",
       caption : "Experimental Project",

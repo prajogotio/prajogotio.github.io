@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+    <script src="deterra.js"></script>
+    <script src="quadtree.js"></script>
+    <style>
+    *{
+        font-family:helvetica;
+        font-weight:lighter;
+    }
+    .Canvas {
+        position:absolute;
+        left:0;
+        right:0;
+        margin:auto;
+    }
+    #start_button {
+        position: absolute;
+        height: 170px;
+        width: 500px;
+        padding-top: 20px;
+        font-size:3em;
+        text-align:center;
+        border: 1px black solid;
+        left:0;
+        right:0;
+        top: 320px;
+        margin:auto;
+        background-color: white;
+        cursor: pointer;
+    }
+    #instruction {
+        position: absolute;
+        width:360px;
+        margin: auto;
+        left: 0px;
+        right: 0px;
+        top: 20px;
+        padding-top: 100px;
+        text-align: center;
+        font-size: 1.3em;
+    }
+    #title {
+        position: absolute;
+        top: 180px;
+        left: -120px;
+        font-size: 3em;
+        border:1px solid black;
+        padding-left: 100px;
+        padding-right: 10px;
+        transform: rotate(-90deg);
+        webkit-transform: rotate(-90deg);
+    }
+    #time_score {
+        position: absolute;
+        font-size: 3.5em;
+        left: 77%;
+    }
+    </style>
+</head>
+<body>
+    <canvas id="display" height="640" width="1024" class="Canvas">
+    </canvas>
+    <div id="time_score"></div>
+    <div id="start_button">Click here<br>Start Deterra</div>
+    <div id="instruction">Bombers are raining from the sky! Help!<br>
+        <br> Control: Use <em>arrow keys</em> to move left, right and jump. </div>
+    <div id="title"> DETERRA </div>
+</body>
+</html>
