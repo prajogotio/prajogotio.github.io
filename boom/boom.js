@@ -61,7 +61,7 @@ var player = {
     alpha : 90,
     x : 12*96,
     y : 150,
-    speed : 5,
+    speed : 3,
     mouseX : 512,
     command : {},
     handleEvent : playerEventHandler,
@@ -187,8 +187,8 @@ function playerMovementUpdate() {
         if(collisionWithWall(player.x + dx*2, player.y + dy*2)) return;
         player.x += dx;
         player.y += dy;
-        player.horizon = player.height + 22.4 * Math.sin(((player.oscilation+10) % 180) / 180 * Math.PI*0.09);
-        player.oscilation += 10;
+        player.horizon = player.height + 27.4 * Math.sin(((player.oscilation+10) % 180) / 180 * Math.PI*0.09);
+        player.oscilation += 7;
     }
     if(player.command['LEFT']) {
         dx = player.speed * 0.5 * Math.cos((player.alpha - 90) / 180 * Math.PI);
@@ -485,7 +485,7 @@ function EnemyFactory(given_pos_x, given_pos_y, type, status) {
                 imageWidth -= 25;
             }
             enemyCanvas.drawImage(movingImage.img, imageX + movingImage.xOffset, imageY, imageWidth, imageHeigth, screenX, screenY, displayWidth, displayHeight); 
-            movingImage.movingDelta += 0.03;
+            movingImage.movingDelta += 0.02;
             if(movingImage.movingDelta > 1) movingImage.movingDelta = 0;
         };
         
@@ -521,7 +521,7 @@ function EnemyFactory(given_pos_x, given_pos_y, type, status) {
                 imageX = 159 + 174 + 133;
             }
             enemyCanvas.drawImage(attackImage.img, imageX, imageY, imageWidth, imageHeight, screenX, screenY, displayWidth, displayHeight);
-            attackImage.attackDelta += 0.06;
+            attackImage.attackDelta += 0.05;
             if(attackImage.attackDelta > 1) {
                 status.isAttacking = false;
                 attackImage.attackDelta = 0;
@@ -532,7 +532,7 @@ function EnemyFactory(given_pos_x, given_pos_y, type, status) {
             var curFrame = Math.floor(dieImage.dieDelta * dieImage.frames);
             if (curFrame >= dieImage.frames) curFrame = dieImage.frames - 1;
             enemyCanvas.drawImage(dieImage.img, dieImage.width * curFrame, dieImage.height, dieImage.width, dieImage.height, screenX, screenY, displayWidth, displayHeight);
-            dieImage.dieDelta += 0.05;
+            dieImage.dieDelta += 0.04;
             if(dieImage.dieDelta > 1) dieImage.dieDelta = 1;
         };
     }
