@@ -239,13 +239,13 @@ function Bomber(x, y){
     this.x = x;
     this.y = y;
     this.width = 30;
-    this.height = 30;
+    this.height = 70;
     this.color = "red";
     this.speed = 1.4;
     this.upthrust = -5;
     this.velocity = {x : 0, y : 0};
     this.isJumping = false;
-    this.timeAlive = 3000;
+    this.timeAlive = 2000;
     this.dead = false;
     this.radius = 100;
 }
@@ -275,13 +275,17 @@ Bomber.prototype.isDead = function(){
 }
 
 Bomber.prototype.update = function(curTime){
+    if(this.y > 700) {
+        this.dead = true;
+        return;
+    }
     this.tryExplode(curTime);
     this.randomLogic();
     this.updatePosition();
 }
 
 Bomber.prototype.removeSurroundingGround = function(){
-    qt.insert(this.x - this.radius/2, this.y, this.radius, this.radius, type.EMPTY);
+    qt.insert(this.x - this.radius/2, this.y + this.height, this.radius, this.radius, type.EMPTY);
 }
 
 function gameOver(){
