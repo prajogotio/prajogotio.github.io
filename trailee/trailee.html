@@ -1,0 +1,48 @@
+<html>
+<head>
+    <script src="mouseTrailer.js"></script>
+    <script src="trailee.js"></script>
+    <style>
+    body {
+        background-color: black;
+        margin: 0;
+        padding: 0;
+    }
+    #display{
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        margin: auto;
+        z-index: 0;
+        top: 30px;
+    }
+    #title {
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        margin: auto;
+        width: 300px;
+        font-size: 2em;
+        text-align: center;
+        font-family: "Helvetica Neue", helvetica;
+        font-weight: lighter;
+        z-index: 1;
+        color: white;
+    }
+    #footer {
+        font-family: helvetica;
+        font-weight: lighter;
+        bottom: 0;
+        color: white;
+        left: 80%;
+        position: absolute;
+        z-index: 2;
+    }
+    </style>
+</head>
+<body>
+    <div id="title">trailee<br><em>the moving linked list</em></div>
+    <canvas width="1024" height="640" id="display"></canvas>
+    <div id="footer">By Prajogo Tio, 2014 </div>
+</body>
+</html>

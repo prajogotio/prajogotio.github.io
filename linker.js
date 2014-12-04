@@ -30,4 +30,8 @@ var Projects = [
       title : "Boom",
       caption : "FPS By RayCasting 2.5D Game",
     },
+    { url : "trailee/trailee.html",
+      title : "Trailee",
+      caption : "linked list that's alive",
+    },
 ];
