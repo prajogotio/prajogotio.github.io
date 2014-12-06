@@ -120,7 +120,8 @@ function playerEventHandler(e) {
         playerShootingHandler();
         e.preventDefault();
     } else if ( e.type == 'mouseup' ) {
-        player.isShooting = false;
+        //in a threaded environment, this is a very bad approach.
+        //player.isShooting = false;
     }
 }
 
@@ -175,6 +176,9 @@ function playerShootingHandler() {
 
 function playerUpdater() {
     playerMovementUpdate();
+    if (player.isShooting) {
+        if (Date.now() - player.lastShoot > 100) player.isShooting = false;
+    }
     if (maze.map.cell( Math.floor(player.y/maze.map.tile.dim), Math.floor(player.x/maze.map.tile.dim) ) === 2) {
         gameIsWon();
     }
@@ -187,7 +191,7 @@ function playerMovementUpdate() {
         if(collisionWithWall(player.x + dx*2, player.y + dy*2)) return;
         player.x += dx;
         player.y += dy;
-        player.horizon = player.height + 27.4 * Math.sin(((player.oscilation+10) % 180) / 180 * Math.PI*0.09);
+        player.horizon = player.height + 27.4 * Math.sin(((player.oscilation+10) % 180) / 180 * Math.PI*0.12);
         player.oscilation += 7;
     }
     if(player.command['LEFT']) {
@@ -417,7 +421,7 @@ function EnemyFactory(given_pos_x, given_pos_y, type, status) {
         height = 100;
         offsetY = 10;
         width = 70;
-        speed = 0.8;
+        speed = 0.5;
 
         
         function movementBehavior() { 
@@ -605,7 +609,7 @@ function EnemyFactory(given_pos_x, given_pos_y, type, status) {
     
     function gotShot() {
         var beta = Math.abs(getAngleWithPlayer());
-        var offsetW = Math.sin(beta/180*Math.PI) * distanceWithPlayer();
+        var offsetW = Math.sin(beta*Math.PI/180.0) * distanceWithPlayer();
         var offsetH = (player.horizon - 300) / distToScreen * distanceWithPlayer();
         return (Math.abs(offsetW) < width/2 && Math.abs(offsetH + offsetY) < height/2)
     }
