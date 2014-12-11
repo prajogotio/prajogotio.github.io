@@ -124,7 +124,7 @@ function commandHandler() {
 		}
 	}
 	if(command['DOWN']) {
-		if(collisionCheck(BOUNDING_RECT_OFFSET, -BOUNDING_RECT_OFFSET + 10, BOUNDING_RECT_SIZE, BOUNDING_RECT_SIZE)) {
+		if(collisionCheck(BOUNDING_RECT_OFFSET, -BOUNDING_RECT_OFFSET + 15, BOUNDING_RECT_SIZE, BOUNDING_RECT_SIZE)) {
 			notMoving = false;
 			player.moveDown();
 		}
