@@ -18,9 +18,9 @@ var DataStructures = [
 ];
 
 var Projects = [
-    { url : "fross/fross.html",
+    { url : "fross_game/fross.html",
       title: "Fross",
-      caption: "Trapped in Hamiltonian Path"
+      caption: "Trapped in Hamiltonian World"
     },
     { url : "deterra/deterra.html",
       title : "Deterra",
