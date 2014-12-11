@@ -47,6 +47,9 @@ function gameIsReady() {
 	startButton.addEventListener('click', function() {
 		startButton.style.setProperty('z-index', -1);
 		startButton.style.setProperty('opacity', 0);
+		var instruction = document.getElementById('instruction');
+		instruction.style.setProperty('opacity', 0);
+		instruction.style.setProperty('z-index', -1);
 		initializeGame();
 	})
 }
