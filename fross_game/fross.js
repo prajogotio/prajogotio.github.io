@@ -15,6 +15,8 @@ var announcement;
 var startButton;
 var lastIdle;
 var levelBoard;
+var countdown;
+var counterloop;
 
 document.addEventListener('DOMContentLoaded', function(){
 	display = document.getElementById('display');
@@ -65,10 +67,15 @@ function keyDownHandler() {
 }
 
 function initializeGame() {
+	clearScreen()
 	initializeEventListener();
 	initializePlayer(0, 0);
 	initializeMap(MAP_LEFT, MAP_TOP);
 	command = {};
+	countDownBeforeGameLoop();
+}
+
+function startGameLoop() {
 	lastIdle = Date.now();
 	gameloop = setInterval(function() {
 		gameLogic();
@@ -91,6 +98,7 @@ function setMapLevel(level, left, top) {
 	gameMap = new FloorMap(level, mapDisplay, left, top);
 	var startPos = gameMap.getStartingPosition();
 	player.setPosition(startPos.left, startPos.top);
+	player.render();
 }
 
 function initializeEventListener() {
@@ -172,6 +180,22 @@ function render(){
 	gameMap.render();
 }
 
+function countDownBeforeGameLoop() {
+	countdown = Date.now();
+	counterloop = setInterval(function() {
+		announcement.style.setProperty('opacity', 1);
+		var diff = parseInt((Date.now() - countdown)/800);
+		diff = 3 - diff;
+		if(diff == 0) {
+			clearInterval(counterloop);
+			announcement.style.setProperty('opacity', 0);
+			startGameLoop();
+			return;
+		}
+		announcement.innerHTML = parseInt(diff);
+	})
+}
+
 function checkGameState() {
 	if(Date.now() - lastIdle > TIME_ALIVE) {
 		gameOver();
@@ -190,9 +214,17 @@ function playerIsAtFinishTile() {
 }
 
 function nextLevel() {
+	player.stopMoving();
 	mapLevel++;
-	mapDisplay.getContext('2d').clearRect(0, 0, 1024, 640);
+	clearScreen();
 	setMapLevel(mapLevel, MAP_LEFT, MAP_TOP);
+	clearInterval(gameloop);
+	countDownBeforeGameLoop();
+}
+
+function clearScreen() {
+	mapDisplay.getContext('2d').clearRect(0, 0, 1024, 640);
+	display.getContext('2d').clearRect(0, 0, 1024, 640);
 }
 
 function gameOver() {
