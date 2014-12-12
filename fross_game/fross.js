@@ -51,6 +51,7 @@ function gameIsReady() {
 }
 
 function startButtonHandler() {
+	document.removeEventListener('keydown', keyDownHandler);
 	startButton.style.setProperty('z-index', -1);
 	startButton.style.setProperty('opacity', 0);
 	var instruction = document.getElementById('instruction');
@@ -61,7 +62,6 @@ function startButtonHandler() {
 
 function keyDownHandler() {
 	startButtonHandler();
-	document.removeEventListener('keydown', keyDownHandler);
 }
 
 function initializeGame() {
