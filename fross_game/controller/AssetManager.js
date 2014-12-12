@@ -18,21 +18,39 @@ AssetManager.prototype.downloadAssets = function() {
 		return;
 	}
 	for (var i = 0; i < this.assetQueue.length; ++i) {
-		var curImg = new Image();
-		var url = this.assetQueue[i];
-		curImg.addEventListener('error', function() {
-			++manager.processed;
-			manager.downloadedHandler();
-		});
-		curImg.addEventListener('load', function() {
-			++manager.processed;
-			manager.downloadedHandler();
-			if(manager.processed === manager.numOfAssets) {
-				manager.uponCompletionHandler();
-			}
-		});
-		curImg.src = url;
-		this.cache[url] = {'asset' : curImg};
+		if(this.assetQueue[i].type == 'sound') {
+			var url = this.assetQueue[i].url;
+			var curAudio = new Audio();
+			curAudio.addEventListener('error', function() {
+				++manager.processed;
+				manager.downloadedHandler();
+			});
+			curAudio.addEventListener('loadedmetadata', function() {
+				++manager.processed;
+				manager.downloadedHandler();
+				if(manager.processed === manager.numOfAssets) {
+					manager.uponCompletionHandler();
+				}
+			});
+			curAudio.src = url;
+			this.cache[url] = {'asset' : curAudio};
+		} else {
+			var curImg = new Image();
+			var url = this.assetQueue[i];
+			curImg.addEventListener('error', function() {
+				++manager.processed;
+				manager.downloadedHandler();
+			});
+			curImg.addEventListener('load', function() {
+				++manager.processed;
+				manager.downloadedHandler();
+				if(manager.processed === manager.numOfAssets) {
+					manager.uponCompletionHandler();
+				}
+			});
+			curImg.src = url;
+			this.cache[url] = {'asset' : curImg};
+		}
 	}
 }
 

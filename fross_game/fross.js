@@ -1,5 +1,6 @@
 var BOUNDING_RECT_OFFSET = 8;
 var BOUNDING_RECT_SIZE = 48;
+var BGM_URL = 'assets/silverbell.mp3';
 var TIME_ALIVE = 2000;
 var MAP_LEFT = 100;
 var MAP_TOP = 100;
@@ -32,11 +33,21 @@ document.addEventListener('DOMContentLoaded', function(){
 	assetManager.pushAssetURL('assets/Tile_Broken.png');
 	assetManager.pushAssetURL('assets/Tile_Finish_Locked.png');
 	assetManager.pushAssetURL('assets/Tile_Blocked.png');
+	assetManager.pushAssetURL({'url': BGM_URL, 'type': 'sound'});
 	assetManager.setCompletionHandler(gameIsReady);
 	assetManager.setDownloadedHandler(downloadedHandler);
 	assetManager.downloadAssets();
 
 });
+
+function BGMStarter() {
+	BGM = assetManager.getAsset(BGM_URL);
+	BGM.addEventListener('ended', function() {
+		this.currentTime = 0;
+		this.play();
+	}, false);
+	BGM.play();
+}
 
 function downloadedHandler() {
 	var progress = (assetManager.processed / assetManager.numOfAssets) * 100;
@@ -45,6 +56,7 @@ function downloadedHandler() {
 
 function gameIsReady() {
 	Tile.prototype.setImages();
+	BGMStarter();
 	startButton.innerHTML = 'Start Fross';
 	startButton.addEventListener('click', function() {
 		startButtonHandler();
