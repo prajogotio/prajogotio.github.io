@@ -91,11 +91,11 @@ FloorMap.prototype.getFinishingPosition = function() {
 };
 
 FloorMap.prototype.willStepOn = function(left, top, width, height) {
-	if(this.left -20  > left || this.top -20 > top || this.left + (this.width - 1) * TILE_SIZE + 20 < left || this.top + (this.height - 1) * TILE_SIZE + 20 < top) return false;
+	if(this.left > left || this.top > top || this.left + this.width * TILE_SIZE < left || this.top + this.height * TILE_SIZE < top) return false;
 	for (var i = 0; i < this.height; ++i) {
 		for (var j = 0; j < this.width; ++j) {
-			var tileTop = i * TILE_SIZE + this.top + 8;
-			var tileLeft = j * TILE_SIZE + this.left + 8;
+			var tileTop = i * TILE_SIZE + this.top;
+			var tileLeft = j * TILE_SIZE + this.left;
 			var isContained = this.collisionWith(tileLeft, tileTop, left, top, width, height);
 			if(isContained) {
 				if (this.tiles[i][j].isBrokenOrBlocked()) return false;
@@ -108,8 +108,8 @@ FloorMap.prototype.willStepOn = function(left, top, width, height) {
 FloorMap.prototype.isSteppingOn = function(left, top, width, height) {
 	for (var i = 0; i < this.height; ++i) {
 		for (var j = 0; j < this.width; ++j) {
-			var tileTop = i * TILE_SIZE + this.top + 8;
-			var tileLeft = j * TILE_SIZE + this.left + 8;
+			var tileTop = i * TILE_SIZE + this.top;
+			var tileLeft = j * TILE_SIZE + this.left;
 			var isContained = this.collisionWith(tileLeft, tileTop, left, top, width, height);
 			if(isContained) {
 				this.tiles[i][j].stepIn();
@@ -122,12 +122,12 @@ FloorMap.prototype.isSteppingOn = function(left, top, width, height) {
 FloorMap.prototype.collisionWith = function(tileLeft, tileTop, left, top, width, height) {
 	var isContained = true;
 	if(tileTop <= top) {
-		if(tileTop + TILE_SIZE - 16 < top) isContained = false;
+		if(tileTop + TILE_SIZE < top) isContained = false;
 	} else {
 		if(top + height < tileTop) isContained = false;
 	}
 	if(tileLeft <= left) {
-		if(tileLeft + TILE_SIZE - 16 < left) isContained = false;
+		if(tileLeft + TILE_SIZE < left) isContained = false;
 	} else {
 		if(left + width < tileLeft) isContained = false;
 	}
