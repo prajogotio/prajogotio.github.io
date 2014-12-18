@@ -1,65 +1,62 @@
 <!DOCTYPE html>
+
 <html>
-<head>
-<link rel="stylesheet" type="text/css" href="stylesheets/index.css" />
-<script src="manager.js"></script>
-<script src="linker.js"></script>
-</head>
-<body>
-	<div class="Container">
-		<div class="Heading">
-			<div class="MyName">Prajogo Tio</div>
-			<div class="Menu">
-				<a href="#datastructure">
-					<div class="Options">
-						Data Structures and Algorithms
-					</div>
-				</a>
-				<a href="#projects">
-					<div class="Options">
-						Projects
-					</div>
-				</a>
-				<a href="#contact">
-					<div class="Options">
-						Contact
-					</div>
-				</a>
+	<head>
+		<title>prajogotio</title>
+		<script src="linker.js"></script>
+		<script src="manager.js"></script>
+		<script src="index.js"></script>
+		<link rel="stylesheet" type="text/css" href="index.css">
+		<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+		<div id="menubar-ghost">
+			<a href="#project-divisor"><div class="menu">projects</div></a>
+			<a href="#demos-divisor"><div class="menu">demos</div></a>
+			<a href="http://abitofcs.blogspot.sg"><div class="menu">blog</div></a>
+			<a href="#contacts"><div class="menu">contacts</div></a>
+		</div>
+		<div id="header">
+			<div id="heading"><div id="heading-title">prajogotio</div></div>
+			<div id="description"><p><span class="text-theme-color">Computer Science</span> Enthusiast</p><p>I build dreams.</p></div>
+			<div id="menubar">
+				<a href="#project-divisor"><div class="menu">projects</div></a>
+				<a href="#demos-divisor"><div class="menu">demos</div></a>
+				<a href="http://abitofcs.blogspot.sg/"><div class="menu">blog</div></a>
+				<a href="#contacts"><div class="menu">contacts</div></a>
 			</div>
 		</div>
-		<div class="Motto">
-			<div class="Profession">
-				Software Engineer, Designer and Developer
+		<div id="content">
+			<div class="content-divisor" id="project-divisor">
+				<div class="content-divisor-title"><u>projects</u></div>
 			</div>
-			<div class="Caption">
-				I build dreams.
-				<br>
-				<br>
-				<br>
-				Repository of my side projects.
+			<div id="project-list">
+			
 			</div>
-		</div>
-		<div class="DataStructureOption" id="datastructure">
-		
-		</div>
-		<div class="ProjectOption" id="projects">
-		
-		</div>
-		<div class="Contact" id="contact">
-			<div class="Header">
-				Contact
+
+			<div class="content-divisor" id="demos-divisor">
+				<div class="content-divisor-title"><u>demos</u></div>
 			</div>
-			<div class="AboutMe">
-				gmail: prajogotio@gmail.com<br>
-				hotmail: ggkgaya@hotmail.com<br>
-				phone: +65 86470687<br>
-				<br>
-				I also maintain a blog at <a href="abitofcs.blogspot.com">abitofcs.blogspot.com</a> :D
+
+			<div id="demo-list">
+				
+			</div>
+
+
+		</div>
+
+		<div id="contacts">
+			<div class="contacts-title">About Me - Prajogo Tio</div>
+			<div class="contacts-content">I am a student from Nanyang Technological Univeristy, pursuing a degree in Bachelor of Engineering Science and a master's degree in Master of Science in Technological Management. I love software engineering and computer science. I also love to look for new design concepts both in user interface and in software development. Most of all, I love learning :)</div>
+			<div class="contacts-detail">
+				<p><u>Email</u>: prajogotio@gmail.com</p>
+				<p><u>Mobile</u>: +65 8647 0687</p>
+				<p><u>Blog</u>: abitofcs.blogspot.sg</p>
 			</div>
 		</div>
-		<div class="Footer">
-			<div>Prajogo Tio. Nanyang Technological University, 2014. </div>
+
+		<div id="footer">
+			By Prajogo Tio, Nanyang Technological University. 2014.
 		</div>
-	</div>
-</body>
+	</body>
 </html>

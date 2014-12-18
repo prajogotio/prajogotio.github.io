@@ -1,0 +1,167 @@
+* {
+	box-sizing: border-box;
+	font-family: "Quicksand", helvetica;
+	color: black;
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+a:hover *{
+	background-color: black;
+	color: white;
+}
+
+body {
+	font-size: 1em;
+	margin: 0;
+	padding: 0;
+}
+
+#header {
+	width: 100%;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#heading {
+	width: 100%;
+	color: white;
+	font-size: 2.4em;
+	background-color: black;
+}
+
+#heading-title {
+	color: white;
+	width: 380px;
+	background-color: #FF4300;
+}
+
+#description {
+	margin-top: 110px;
+	margin-bottom: 120px;
+	font-size: 3.6em;
+}
+
+#menubar , #menubar-ghost{
+	position: relative;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	background-color: #FF4300;
+	justify-content: center;
+}
+
+.text-theme-color {
+	color: #FF4300;
+}
+
+.menu {
+	padding: 10px 0 10px 0;
+	font-size: 1.3em;
+	color: white;
+	text-align: center;
+	width: 200px;
+	transition: background-color 0.4s;
+}
+
+#content {
+	margin: 80px 0 0 0px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.content-divisor {
+	margin-bottom: 30px;
+}
+
+.content-divisor-title {
+	padding: 0 0 0 100px;
+	font-size: 3em;
+	color: black;
+}
+
+#project-list, #demo-list {
+	margin: 0 0 0 230px;
+	width: 700px;
+}
+
+.project {
+	padding: 20px 20px 20px 20px;
+	width: 700px;
+	border: 1px solid #FF4300;
+	margin-bottom: 30px;
+}
+
+.project-title {
+	font-size: 2.3em;
+	color: #FF4300;
+	margin-bottom: 20px;
+}
+
+.project-image {
+	width: 90%;
+	padding-left: 10%;
+	left: 0;
+	margin-bottom: 20px;
+}
+
+.project-image img {
+	width: 100%;
+}
+.project-description {
+	font-size: 1.3em;
+}
+
+#contacts {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	margin: 30px 0 0 0;
+	background-color: black;
+	border-radius: 20px 0 0 0;
+}
+
+#contacts * {
+	color: white;
+	border-radius: 20px 0 20px 0;
+
+}
+
+.contacts-title {
+	font-size: 2em;
+	padding: 20px 10px 10px 30px;
+	background-color: #FF4300;
+	width: 55%;
+}
+
+.contacts-content {
+	font-size: 1.2em;
+	padding: 40px 10px 10px 30px;
+}
+
+.contacts-detail {
+	padding: 10px 10px 10px 30px;
+}
+
+#footer {
+	padding: 30px;
+	font-size:1.1em;
+	color: white;
+	text-align: right;
+	background-color: red;
+}
+
+#menubar-ghost {
+	display:none;
+	position:fixed;
+	left:0;
+	top:0;
+	z-index: 10;
+}
