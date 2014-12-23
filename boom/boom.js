@@ -149,10 +149,10 @@ function playerAttackedEventHandler() {
 };
 
 function playerMouseMoveHandler(e) {
-    var x = e.x - maze.DOM.offsetLeft;
-    var y = e.y - maze.DOM.offsetTop;
+    var x = e.screenX - maze.DOM.offsetLeft;
+    var y = e.screenY - maze.DOM.offsetTop;
     var dT = (x - player.mouseX) * 0.75;
-    player.height = (-e.y + 300) + 300;
+    player.height = (-e.screenY + 300) + 300;
     player.horizon = player.height;
     player.mouseX = x;
     player.alpha += dT;
