@@ -27,9 +27,15 @@ function renderAsOption(opt){
       ret += opt.url;
       ret += "><div class='project'><div class='project-title'>";
       ret += opt.title;
-      ret += "</div><div class='project-image'><img src=";
-      ret += opt.img 
-      ret += "></div><div class='project-description'>";
+      ret += "</div>";
+
+      if(opt.img !== "") {
+          ret += "<div class='project-image'><img src=";
+          ret += opt.img 
+          ret += "></div>"
+      }
+      
+      ret += "<div class='project-description'>";
       ret += opt.caption;
       ret += "</div></div></a>";
   return ret;
