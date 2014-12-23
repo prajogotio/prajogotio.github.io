@@ -195,6 +195,7 @@ function render(){
 function countDownBeforeGameLoop() {
 	countdown = Date.now();
 	counterloop = setInterval(function() {
+		console.log("what happened");
 		announcement.style.setProperty('opacity', 1);
 		var diff = parseInt((Date.now() - countdown)/800);
 		diff = 3 - diff;
@@ -205,7 +206,7 @@ function countDownBeforeGameLoop() {
 			return;
 		}
 		announcement.innerHTML = parseInt(diff);
-	})
+	}, 500);
 }
 
 function checkGameState() {
