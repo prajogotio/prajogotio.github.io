@@ -51,7 +51,7 @@ function startTrailing() {
 }
 
 function handleMouseMove(e) {
-    mousePointer.setPosition(e.x - display.offsetLeft, e.y - display.offsetTop);
+    mousePointer.setPosition(e.pageX - display.offsetLeft, e.pageY - display.offsetTop);
 }
 
 function handleKeyDown(e) {
