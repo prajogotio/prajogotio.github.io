@@ -463,7 +463,7 @@ function EnemyFactory(given_pos_x, given_pos_y, type, status) {
             } else if (status.isAttacking) {
                 handleAttackRender(screenX, screenY, displayWidth, displayHeight);
             } else {
-                enemyCanvas.drawImage(movingImage.img, movingImage.width*1 + movingImage.xOffset, 0, movingImage.width, movingImage.height, screenX, screenY, displayWidth, displayHeight);
+                enemyCanvas.drawImage(movingImage.img, movingImage.width*1 + movingImage.xOffset, 0, movingImage.width, movingImage.height-5, screenX, screenY, displayWidth, displayHeight);
             }
         };
         
@@ -472,23 +472,28 @@ function EnemyFactory(given_pos_x, given_pos_y, type, status) {
             if (frame >= movingImage.frames) frame = movingImage.frames - 1;
             var imageX, imageY;
             var imageWidth = movingImage.width;
-            var imageHeigth = movingImage.height;
+            var imageHeight = movingImage.height;
             if (frame == 0) {
                 imageX = movingImage.width * 1;
                 imageY = 0;
+                imageWidth -= 3;
+                imageHeight -= 4;
             } else if (frame == 1) {
-                imageX = movingImage.width * 0 + 2;
+                imageX = movingImage.width * 1 - 140;
                 imageY = 0;
-                imageWidth -= 10;
+                imageWidth -= 22;
+                imageHeight -= 4;
             } else if (frame == 2) {
                 imageX = movingImage.width * 3 - 20;
                 imageY = 0;
+                imageHeight -= 4;
             } else if (frame == 3) {
                 imageX = movingImage.width * 2;
                 imageY = 0;
-                imageWidth -= 25;
+                imageWidth -= 28;
+                imageHeight -= 4;
             }
-            enemyCanvas.drawImage(movingImage.img, imageX + movingImage.xOffset, imageY, imageWidth, imageHeigth, screenX, screenY, displayWidth, displayHeight); 
+            enemyCanvas.drawImage(movingImage.img, imageX + movingImage.xOffset, imageY, imageWidth, imageHeight, screenX, screenY, displayWidth, displayHeight); 
             movingImage.movingDelta += 0.02;
             if(movingImage.movingDelta > 1) movingImage.movingDelta = 0;
         };
@@ -507,10 +512,10 @@ function EnemyFactory(given_pos_x, given_pos_y, type, status) {
         function handleAttackRender(screenX, screenY, displayWidth, displayHeight) { 
             var curFrame = Math.floor(attackImage.attackDelta * attackImage.frames);
             if (curFrame >= dieImage.frames) curFrame = attackImage.frames - 1;
-            var imageX, imageY, imageWidth, imageHeigth;
+            var imageX, imageY, imageWidth, imageHeight;
             
             imageY = 57;
-            imageHeight = 192;
+            imageHeight = 176;
             if (curFrame == 0) {
                 imageX = 0;
                 imageWidth = 159;
@@ -521,7 +526,7 @@ function EnemyFactory(given_pos_x, given_pos_y, type, status) {
                 imageWidth = 133;
                 imageX = 159 + 174;
             } else if(curFrame == 3) {
-                imageWidth = 126;
+                imageWidth = 123;
                 imageX = 159 + 174 + 133;
             }
             enemyCanvas.drawImage(attackImage.img, imageX, imageY, imageWidth, imageHeight, screenX, screenY, displayWidth, displayHeight);
