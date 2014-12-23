@@ -139,8 +139,8 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function empty(e) {
-    var cx = Math.floor(e.x - canvas.offsetLeft);
-    var cy = Math.floor(e.y - canvas.offsetTop);
+    var cx = Math.floor(e.pageX - canvas.offsetLeft);
+    var cy = Math.floor(e.pageY - canvas.offsetTop);
     qt.insert(cx, cy, 32, 32, type.EMPTY);
     qt.render(canvas.getContext('2d'));
 }
