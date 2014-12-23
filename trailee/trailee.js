@@ -12,6 +12,8 @@ function Trailee(graphics) {
 
 Trailee.prototype.initializeBuffer = function() {
     var g = buffer.getContext('2d');
+    buffer.width = 300;
+    buffer.height = 300;
     g.strokeStyle = "white";
     g.lineWidth = 1.2;
     g.moveTo(100, 100);
