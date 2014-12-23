@@ -44,8 +44,8 @@ Renderable.prototype.render = function(){
 			this.src_y,
 			this.src_width, 
 			this.src_height,
-			this.x,
-			this.y,
+			Math.floor(this.x),
+			Math.floor(this.y),
 			this.width,
 			this.height
 	);

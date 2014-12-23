@@ -55,8 +55,8 @@ const BG_SRC_HEIGHT = 610;
 const BG_SPEED = 3;
 
 //ENEMY
-const ENEMY_SRC_WIDTH = 87;
-const ENEMY_SRC_HEIGHT = 52;
+const ENEMY_SRC_WIDTH = 85;
+const ENEMY_SRC_HEIGHT = 50;
 const ENEMY_WIDTH = 87;
 const ENEMY_HEIGHT = 52;
 const ENEMY_SPEED = 1;
@@ -64,9 +64,9 @@ const SPAWN_RATE = 2000;
 const ENEMY_ATTACK_RATE = 1000;
 const ENEMY_ATTACK_PROB = 0.01;
 
-const ENEMY_BULLET_SRC_X = 38;
+const ENEMY_BULLET_SRC_X = 37;
 const ENEMY_BULLET_SRC_Y = 0;
-const ENEMY_BULLET_SRC_WIDTH = 10;
+const ENEMY_BULLET_SRC_WIDTH = 9;
 const ENEMY_BULLET_SRC_HEIGHT = 10;
 const ENEMY_BULLET_WIDTH = 15;
 const ENEMY_BULLET_HEIGHT = 15;
@@ -474,7 +474,7 @@ Explosion.prototype.render = function(){
 		var frame = Math.floor((curTime - this.explosionQueue[i].animStart) / EXPLOSION_ANIM_RATE);
 		if(frame < 13){
 			this.renderable.update(this.explosionQueue[i].x, CANVAS_HEIGHT - this.explosionQueue[i].y);
-			this.renderable.switchFrame(frame * EXPLOSION_SRC_WIDTH, EXPLOSION_SRC_HEIGHT + EXPLOSION_SRC_Y);
+			this.renderable.switchFrame(frame * EXPLOSION_SRC_WIDTH, EXPLOSION_SRC_HEIGHT + EXPLOSION_SRC_Y-1);
 			this.renderable.render();
 
 			this.renderable.update(this.explosionQueue[i].x + EXPLOSION_WIDTH - EXPLOSION_SRC_X, CANVAS_HEIGHT - this.explosionQueue[i].y);
