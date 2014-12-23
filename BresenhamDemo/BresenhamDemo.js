@@ -190,8 +190,8 @@ function EventHandler(e) {
 }
 
 function MouseClickHandler(e, circle) {
-    var mouseX = event.x - canvas.offsetLeft;
-    var mouseY = event.y - canvas.offsetTop;
+    var mouseX = e.pageX - canvas.offsetLeft;
+    var mouseY = e.pageY - canvas.offsetTop;
     var dx = (mouseX - circle.point.getLeft());
     var dy = (mouseY - circle.point.getTop());
     if( dx*dx + dy*dy < Constants.Radius * Constants.Radius ) {
@@ -201,8 +201,8 @@ function MouseClickHandler(e, circle) {
 }
 
 function MouseMoveHandler(e, circle) {
-    var mouseX = event.x - canvas.offsetLeft;
-    var mouseY = event.y - canvas.offsetTop;
+    var mouseX = e.pageX - canvas.offsetLeft;
+    var mouseY = e.pageY - canvas.offsetTop;
     circle.point = Point(mouseX, mouseY);
 }
 
