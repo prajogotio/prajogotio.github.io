@@ -22,6 +22,12 @@ var Demos = [
 ];
 
 var Projects = [
+    {
+      url : "http://prajogotio.github.io/parquer/parquer.html",
+      title : 'parquer',
+      img : 'img/parquer.jpg',
+      caption : "A Neo-classical space shooting game, featuring a 2D inertial physics engine and a 360 shooting experience. In this game, space dots are your enemies, and be sure to kill them all. Be sure in the lookout for parquers, which grants unforeseen powers to its beholder!"
+    },
     { url : "fross_game/fross.html",
       title: "Fross",
       img: "img/fross.jpg",
