@@ -38,6 +38,12 @@ var Projects = [
       img: "img/boom.jpg",
       caption : "A First person shooting game which is written on vanilla javascript, using a technique called raycasting. It was quite a fun experience to create the maze, and an amazing one as well, because you can really see how a 2D array of 0s and 1s is being rendered as a nearly 3D maze. Anyway, in this game, you are supposed to find a way out of Boom, and may the odds be ever in your favour!",
     },
+    {
+      title : "pervPong",
+      url : "http://prajogotio.github.io/pervPong/jar/pervPong.jar",
+      img : "img/pervpong.jpg",
+      caption : "My simple take on the classical Pong game, written on Java. This motivation was mostly to practice on implementing several object oriented design principles and design patterns in general.",
+    },
     { url : "trailee/trailee.html",
       title : "Trailee",
       img: "img/trailee.jpg",
