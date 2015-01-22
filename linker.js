@@ -4,6 +4,12 @@ var Demos = [
       img: "",
       caption : "In a dot eat dot world",
     },
+    {
+      url : "simpleMesh/simpleMesh.html",
+      title : "3D Projection Demo",
+      img : "",
+      caption : "Simple Rotational 3D Cube Projection Demo",
+    },
     { url : "BresenhamDemo/bresenhamdemo.html",
       title : "Bresenham",
       img: "",
