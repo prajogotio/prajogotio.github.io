@@ -29,6 +29,12 @@ var Demos = [
 
 var Projects = [
     {
+      url : "http://prajogotio.github.io/Spardiac/Spardiac.html",
+      title : 'Spardiac',
+      img : 'img/spardiac.jpg',
+      caption : 'I have just *accidentally* created my own 3D rendering engine on Javascript, which features wireframe-like 3D rendering system purely using linear algebra, perspective projections, and insights on 3D calculations. The renderer can practically render any type of 3D polygons defined using points and segments of lines, providing a lot of room for extensibility and usability. Here I put a demo on the engine, which I themed "How does it feel to be an Ironman?". It was a tedious job, but was fun and fulfilling!'
+    },
+    {
       url : "http://prajogotio.github.io/parquer/parquer.html",
       title : 'parquer',
       img : 'img/parquer.jpg',
