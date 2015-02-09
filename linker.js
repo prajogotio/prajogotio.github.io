@@ -32,7 +32,7 @@ var Projects = [
       url : "http://prajogotio.github.io/fbperspective",
       title : "Perspective",
       img : "img/perspective.jpg",
-      caption: "An app that my friend and I developed during 2015 Facebook Singapore Hackathon, for which we won the 2nd place overall. The app features interesting and beautiful uses of Google Photosphere. The app was really commended for its great UI and designs. The app is best viewed using Google Chrome on a normal sized notebook.",
+      caption: "An app that my friend and I developed during 2015 Facebook Singapore Hackathon, for which we won the 2nd place overall. The app features interesting and beautiful uses of Google Photosphere. Apparently the judges were impressed with the UI design :). The app is best viewed using Google Chrome on a normal sized notebook.",
     },
     {
       url : "http://prajogotio.github.io/Spardiac/Spardiac.html",
