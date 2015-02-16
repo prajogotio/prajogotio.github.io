@@ -37,6 +37,7 @@ var Projects = [
     {
       url : "http://prajogotio.github.io/limelight/out/Limelight.jar",
       img : "img/limelight.png",
+      title : "Limelight",
       caption: "A remake of childhood memories. Limelight is written on Java and makes interesting use of JavaFX Canvas 2D and Timeline.",
     },
     {
