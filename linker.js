@@ -35,6 +35,11 @@ var Projects = [
       caption: "An app that my friend and I developed during 2015 Facebook Singapore Hackathon, for which we won the 2nd place overall. The app features interesting and beautiful uses of Google Photosphere. Apparently the judges were impressed with the UI design :). The app is best viewed using Google Chrome on a normal sized notebook.",
     },
     {
+      url : "http://prajogotio.github.io/limelight/out/Limelight.jar",
+      img : "img/limelight.png",
+      caption: "A remake of childhood memories. Limelight is written on Java and makes interesting use of JavaFX Canvas 2D and Timeline.",
+    },
+    {
       url : "http://prajogotio.github.io/Spardiac/Spardiac.html",
       title : 'Spardiac',
       img : 'img/spardiac.jpg',
