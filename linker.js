@@ -5,6 +5,12 @@ var Demos = [
       caption : "In a dot eat dot world",
     },
     {
+      url : "http://prajogotio.github.io/recursive_bubble/out/RecursiveBubble.jar",
+      title : "Recursive Bubble",
+      img : "",
+      caption : "Applying design patterns on a recursive structure."
+    },
+    {
       url : "simpleMesh/simpleMesh.html",
       title : "3D Projection Demo",
       img : "",
