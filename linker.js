@@ -7,7 +7,7 @@ var Demos = [
     {
       url : "http://prajogotio.github.io/recursive_bubble/out/RecursiveBubble.jar",
       title : "Recursive Bubble",
-      img : "",
+      img : "img/recursive-bubble.png",
       caption : "Applying design patterns on a recursive structure."
     },
     {
