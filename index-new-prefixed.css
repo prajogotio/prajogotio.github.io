@@ -1,0 +1,461 @@
+* {
+	box-sizing : border-box;
+}
+
+body {
+	width : 100%;
+	height : 100%;
+	margin : 0;
+	font-size : 1em;
+	background-color : black;
+}
+
+/* CSS FOR HOME TAB */
+
+#main-wrapper {
+	font-family : "Roboto", helvetica;
+	font-weight : lighter;
+	color : white;
+}
+
+.main-tab {
+	position : relative;
+	height: 100%;
+	width: 100%;
+}
+
+#home-bg-img, #home-bg-img img {
+	width : 100%;
+}
+
+#home {
+	overflow : hidden;
+}
+
+#home-bg-img {
+	position : absolute;
+	z-index: 0;
+}
+
+#home-title {
+	position : absolute;
+	z-index : 1;
+	text-align : center;
+	left : 0;
+	right : 0;
+	margin: auto;
+	-webkit-transform : translateY(-50%);
+	    -ms-transform : translateY(-50%);
+	        transform : translateY(-50%);
+	top : 50%;
+	-webkit-transition : opacity 0.5s;
+	        transition : opacity 0.5s;
+	opacity:0;
+}
+
+#home-title-first {
+	-webkit-transition : opacity 1.5s, top 1.5s;
+	        transition : opacity 1.5s, top 1.5s;
+	position : relative;
+}
+
+
+/* MENU CSS */
+
+
+#menu {
+	position : absolute;
+	width : 100%;
+	height : 70px;
+	bottom : 0;
+	z-index : 100;
+	display : -webkit-box;
+	display : -webkit-flex;
+	display : -ms-flexbox;
+	display : flex;
+	font-family : "Source Sans Pro", helvetica;
+	font-weight : lighter;
+	letter-spacing : -1px;
+	background-color : rgba(0,0,0,0.75);
+}
+
+.menuFixed {
+	position : fixed;
+	top : 0px;
+}
+
+
+#menu-sideicon {
+	position : absolute;
+	height : 100%;
+	left : 80px;
+	top : 0px;
+}
+
+#menu-sideicon-wrapper {
+	position : absolute;
+	height : 100%;
+}
+
+#menu-sideicon-wrapper img {
+	height : 100%;
+}
+
+#menu-options-wrapper {
+	position:absolute;
+	top : 50%;
+	-webkit-transform : translateY(-50%);
+	    -ms-transform : translateY(-50%);
+	        transform : translateY(-50%);
+	display : -webkit-box;
+	display : -webkit-flex;
+	display : -ms-flexbox;
+	display : flex;
+	width : 100%;
+	-webkit-flex-wrap : nowrap;
+	    -ms-flex-wrap : nowrap;
+	        flex-wrap : nowrap;
+	-webkit-box-pack : center;
+	-webkit-justify-content : center;
+	    -ms-flex-pack : center;
+	        justify-content : center;
+	height: 70%;
+	/*
+	border : 1px solid white;
+	margin-right:70px;
+	margin-left:70px;
+	*/
+}
+
+.menu-option {
+	margin-left : 50px;
+	font-size : 1.5em;
+}
+
+
+/* CSS FOR PROJECTS TAB */
+
+
+#projects {
+}
+
+#projects-sidetitle {
+	width : 100px;
+	height : 100%;
+	background-color: black;
+	z-index : 2;
+}
+
+#projects-sidetitle-content {
+	position : absolute;
+	font-size : 4em;
+	-webkit-transform : rotate(-90deg);
+	    -ms-transform : rotate(-90deg);
+	        transform : rotate(-90deg);
+	-webkit-transform-origin : 10% 50%;
+	    -ms-transform-origin : 10% 50%;
+	        transform-origin : 10% 50%;
+	bottom : 10px;
+	-webkit-transition : left 0.5s, opacity 0.5s;
+	        transition : left 0.5s, opacity 0.5s;
+	left : 40px;
+	opacity : 0;
+}
+
+#projects-wrapper {
+	position: absolute;
+	display:-webkit-box;
+	display:-webkit-flex;
+	display:-ms-flexbox;
+	display:flex;
+	-webkit-box-align:end;
+	-webkit-align-items:flex-end;
+	    -ms-flex-align:end;
+	        align-items:flex-end;
+	left:0px;
+	top: 0%;
+	height: 100%;
+	z-index: 1;
+	-webkit-transition : opacity 0.5s;
+	        transition : opacity 0.5s;
+	opacity : 0;
+}
+
+.project {
+	height : 90%;
+	width : 500px;
+	background-color:#FF164E;
+}
+
+.project-thumbnail {
+	position:relative;
+	height:47%;
+	width:100%;
+	overflow:hidden;
+}
+
+.project-thumnail-wrapper {
+	height : 100%;
+}
+
+.project-thumbnail-wrapper, .project-thumbnail-wrapper img {
+	width:100%;
+}
+
+.project-description {
+	position:relative;
+	height:53%;
+	padding: 26px;
+}
+
+.project-title {
+	font-family : "Source Sans Pro", helvetica;
+	font-weight : normal;
+	font-size: 2.92em;
+}
+
+.project-caption {
+	font-size : 1.134em;
+	padding-top : 25px;
+	text-align : justify;
+}
+
+.project-alternated {
+	background-color : #007600;
+}
+
+.project-alternated .project-title {
+	text-align : right;
+}
+
+a {
+	text-decoration: none;
+	color : white;
+}
+
+a:hover .project {
+	background-color: #998F34;
+}
+
+a:hover .project-thumbnail-wrapper { 
+	filter : sepia(80%);
+	-webkit-filter : sepia(80%);
+}
+
+.projects-navigation-left, .projects-navigation-right {
+	pointer-events : none;
+	position:absolute;
+	width : 80px; 
+	height: 200px; 
+	background-color: #FFCF84;
+	opacity : 0;
+	-webkit-transition : opacity 0.3s;
+	        transition : opacity 0.3s;
+	z-index:2;
+	top : 60%;
+	-webkit-transform : translateY(-50%);
+	    -ms-transform : translateY(-50%);
+	        transform : translateY(-50%);
+}
+
+.projects-navigation-left {
+	left : 10%;
+	border-radius : 0 200px 200px 0;
+}
+
+.projects-navigation-right .projects-navigation-button-wrapper {
+	left : 0;
+}
+
+.projects-navigation-right {
+	right : 0%;
+	border-radius : 200px 0 0 200px;
+}
+
+.projects-navigation-right .projects-navigation-button-wrapper {
+	right : 0;
+}
+
+.projects-navigation-button-wrapper {
+	height : 33%;
+	width : 60%;
+	position : absolute;
+	top : 50%;
+	-webkit-transform : translateY(-50%);
+	    -ms-transform : translateY(-50%);
+	        transform : translateY(-50%);
+}
+
+.projects-navigation-button-wrapper img {
+	height : 100%;
+}
+
+#demos-navigation, #projects-navigation {
+	overflow : hidden;
+	height : 90%;
+	width : 90%;
+	left : 10%;
+	bottom : 0;
+	position : absolute;
+	z-index : 1;
+}
+
+.project-outer-wrapper {
+	height : 100%;
+}
+
+a .project {
+	height : 100%;
+}
+
+/* DEMOS CSS */
+
+#demos {
+}
+
+#demos-sidetitle {
+	width : 100px;
+	height : 100%;
+	background-color: black;
+	z-index : 2;
+}
+
+#demos-sidetitle-content {
+	position : absolute;
+	font-size : 4em;
+	-webkit-transform : rotate(-90deg);
+	    -ms-transform : rotate(-90deg);
+	        transform : rotate(-90deg);
+	-webkit-transform-origin : 10% 50%;
+	    -ms-transform-origin : 10% 50%;
+	        transform-origin : 10% 50%;
+	bottom : 10px;
+	left : 40px;
+	-webkit-transition : left 0.5s, opacity 0.5s;
+	        transition : left 0.5s, opacity 0.5s;
+	opacity : 0;
+}
+
+
+#demos-wrapper {
+	position: absolute;
+	display:-webkit-box;
+	display:-webkit-flex;
+	display:-ms-flexbox;
+	display:flex;
+	-webkit-box-align:end;
+	-webkit-align-items:flex-end;
+	    -ms-flex-align:end;
+	        align-items:flex-end;
+	left : 0px;
+	top: 0%;
+	height: 100%;
+	z-index: 1;
+	-webkit-transition : opacity 0.5s;
+	        transition : opacity 0.5s;
+	opacity: 0;
+}
+
+
+/* CONTACTS CSS */
+
+#contacts {
+	overflow : scroll;
+}
+
+#contacts-sidetitle {
+	width : 100px;
+	height : 100%;
+	background-color: black;
+	z-index : 2;
+}
+
+#contacts-sidetitle-content {
+	position : absolute;
+	font-size : 4em;
+	-webkit-transform : rotate(-90deg);
+	    -ms-transform : rotate(-90deg);
+	        transform : rotate(-90deg);
+	-webkit-transform-origin : 10% 50%;
+	    -ms-transform-origin : 10% 50%;
+	        transform-origin : 10% 50%;
+	bottom : 10px;
+	-webkit-transition : opacity 0.5s, left 0.5s;
+	        transition : opacity 0.5s, left 0.5s;
+	opacity : 0;
+	left : 40px;
+}
+
+#contacts-wrapper {
+	position: absolute;
+	padding-top:100px;
+	left:10%;
+	top: 0%;
+	height: 100%;
+	width : 90%;
+	z-index: 1;
+	-webkit-transition : opacity 0.5s;
+	        transition : opacity 0.5s;
+	opacity : 0;
+}
+
+a {
+	cursor : pointer;
+}
+
+.menu-option {
+	width : 134px;
+	text-align : center;
+	padding : 3px;
+	border-radius : 5px;
+}
+
+a:hover .menu-option {
+	background-color : #998F34;
+	color : black;
+}
+
+
+
+/* CSS FOR CONTACTS */
+
+#contacts-title {
+	position : relative;
+	font-size : 2.7em;
+}
+
+#contacts-description {
+	font-size : 1.12em;
+	padding : 10px;
+	width : 90%;
+	text-align : justify;
+}
+
+#contacts-list {
+	display : -webkit-box;
+	display : -webkit-flex;
+	display : -ms-flexbox;
+	display : flex;
+}
+
+.contacts-option {
+	height : 100px;
+	margin-right : 10px;
+}
+
+.contacts-option-thumbnail {
+	position:relative;
+	display:inline-block;
+	height : 35px;
+}
+.contacts-option-thumbnail img {
+	height : 100%;
+}
+.contacts-option-caption {
+	position:relative;
+	display:inline-block;
+	color : #FFCF34;
+	-webkit-transform : translateY(-50%);
+	    -ms-transform : translateY(-50%);
+	        transform : translateY(-50%);
+}
