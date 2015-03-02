@@ -23,7 +23,6 @@ $(document).ready(function() {
 		curTime = Date.now();
 		if(curTime - states.lastWheel < 1630) return;
 		states.lastWheel = curTime;
-		console.log(e.originalEvent.deltaY)
 		nextTab = states.currentTab+((e.originalEvent.deltaY || e.originalEvent.wheelDelta) < 0 ? -1 : 1);
 		speed = 880;
 
