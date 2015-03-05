@@ -1,4 +1,10 @@
 var Demos = [
+    {
+      url : "http://prajogotio.github.io/perceptron",
+      title : "Perceptron Live Demo",
+      img : "img/perceptron.jpg",
+      caption : "A live demo of one of the simplest machine learning algorithm called perceptron, which attempts to classify a set of data into two binary classifications. In this demo you can change the iteration limit for the perceptron algorithm and freely add new data points to the learning space."
+    },
     { url : "QuadTreeDemo/quadtreedemo.html",
       title : "QuadTree",
       img: "img/quadtree.jpg",
