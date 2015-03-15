@@ -41,6 +41,12 @@ var Demos = [
 
 var Projects = [
     {
+      url : "http://prajogotio.github.io/EasieR",
+      title : "EasieR",
+      img : "img/easier.png",
+      caption : "EasieR is an ER Diagram drawing tool which features convenience and intuitive interface. The motivation behind this app is simply because there are not many good tools (at least that I know of) that can quickly allow students who are studying database concepts to draw an ER diagram quickly and efficiently. This is my first time for writing an elaborate productivity tool, and this has been an enriching experience",
+    },
+    {
       url : "http://prajogotio.github.io/fbperspective",
       title : "Perspective",
       img : "img/perspective.jpg",
