@@ -41,6 +41,12 @@ var Demos = [
 
 var Projects = [
     {
+      url : "http://prajogotio.github.io/crosspath",
+      title : "CrossPath",
+      img : "img/crosspath.png",
+      caption: "A 2D Platformer RPG/RTS which makes use of trailing Camera. This side-project was intended to break the monotony of school life. The gameplay is simple yet rich and challenging.",
+    },
+    {
       url : "http://prajogotio.github.io/EasieR",
       title : "EasieR",
       img : "img/easier.png",
