@@ -41,6 +41,12 @@ var Demos = [
 
 var Projects = [
     {
+      url : "http://nextep.herokuapp.com/",
+      title : "Nextep",
+      img : "img/nextep.png",
+      caption: "My first attempt on distributed client-server multiplayer game development. The motivation was to discover how Gunbound and Worms' destructible terrain system works. During the development of the distributed computation, I learnt many valuable lessons on event-driven socket programming, event-relaying system, sychronisation issues, and latency problems. The game is currently running at nextep.herokuapp.com."
+    },
+    {
       url : "http://prajogotio.github.io/crosspath",
       title : "CrossPath",
       img : "img/crosspath.png",
