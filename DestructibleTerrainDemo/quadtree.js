@@ -57,10 +57,10 @@ Node.prototype.modifyNode = function(x, y, width, height, type){
 }
 
 Node.prototype.isFullyContained = function(x, y, width, height) {
-    return (x+1 <= this.x && 
-            x+1 + width >= this.x + this.width &&
-            y+1 <= this.y &&
-            y+1 + height >= this.y + this.height);
+    return (x <= this.x && 
+            x + width >= this.x + this.width &&
+            y <= this.y &&
+            y + height >= this.y + this.height);
 }
 
 Node.prototype.isFullyOutside = function(x, y, width, height) {
@@ -141,6 +141,6 @@ document.addEventListener('DOMContentLoaded', function() {
 function empty(e) {
     var cx = Math.floor(e.pageX - canvas.offsetLeft);
     var cy = Math.floor(e.pageY - canvas.offsetTop);
-    qt.insert(cx, cy, 32, 32, type.EMPTY);
+    qt.insert(cx-16, cy-16, 32, 32, type.EMPTY);
     qt.render(canvas.getContext('2d'));
 }
