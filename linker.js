@@ -41,6 +41,12 @@ var Demos = [
 
 var Projects = [
     {
+      url : "http://piggi.herokuapp.com/",
+      title : "piggi.io",
+      img : "img/piggi.png",
+      caption: "My second experience writing a multiplayer game. piggi is a real-time strategy game which features a tower-defense style gameplay. This game was written out of my motivation to implement a synchronised command-log architecture. The game is live at piggi.herokuapp.com"
+    },
+    {
       url : "http://nextep.herokuapp.com/",
       title : "Nextep",
       img : "img/nextep.png",
