@@ -1,130 +1,198 @@
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" type="image/png" href="img/prajogotio_icon16.png" sizes="16x16">
 	<link rel="icon" type="image/png" href="img/prajogotio_icon32.png" sizes="32x32">
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,100' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded|Roboto+Condensed:700" rel="stylesheet">
+	<!--
+	<link rel="stylesheet" href="index-new.css" type="text/css">
+	-->
 	<link rel="stylesheet" href="index-new-prefixed.css" type="text/css">
 	<script src="jquery/jquery-1.11.2.min.js"></script>
 	<script src="linker.js"></script>
 	<script src="index-new.js"></script>
 </head>
 <body>
-	<div id="main-wrapper">
-		<div id="menu">
-			<div id="menu-options-wrapper">
-				<div id="menu-sideicon">
-					<div id="menu-sideicon-wrapper">
-						<img src="img/prajogotio_icon.png"></img>
+	<div id="desktop-version">
+		<div id="main-wrapper">
+			<div id="menu">
+				<div id="menu-options-wrapper">
+					<div id="menu-sideicon">
+						<div id="menu-sideicon-wrapper">
+							<img src="img/prajogotio_icon.png"></img>
+						</div>
+					</div>
+					<a>
+						<div class="menu-option" id="projects-pointer"><span style="color:#FFCF34;">PRO</span>JECTS</div>
+					</a>
+					<a>
+						<div class="menu-option" id="demos-pointer"><span style="color:#FFCF34;">D</span>EMOS</div>
+					</a>
+					<a href="http://abitofcs.blogspot.sg" target="_blank">
+						<div class="menu-option" id="blog-pointer"><span style="color:#FFCF34;">B</span>LOG</div>
+					</a>
+					<a>
+						<div class="menu-option" id="contacts-pointer"><span style="color:#FFCF34;">CON</span>TACTS</div>
+					</a>
+				</div>
+			</div>
+			<div id="home" class="main-tab">
+				
+				<div id="home-bg-img">
+				</div>
+				<div id="home-title">
+					<div style="font-size:4.8em;letter-spacing:1px;"><span id="home-title-first" style="color:#FFCF34;top:30px;opacity:0;">Computer Science</span> Enthusiast</div>
+					<div style="margin-top:28px;letter-spacing:2px;"><span style="font-size:2.7em;">I build <span style="color:#FFCF34;">dreams</span></span></div>
+				</div>
+			</div>
+			<div id="projects" class="main-tab">
+				<div id="projects-sidetitle">
+					<div id="projects-sidetitle-content">
+						<span style="color:#FFCF34;">PRO</span>JECTS
 					</div>
 				</div>
-				<a>
-					<div class="menu-option" id="projects-pointer"><span style="color:#FFCF34;">PRO</span>JECTS</div>
-				</a>
-				<a>
-					<div class="menu-option" id="demos-pointer"><span style="color:#FFCF34;">D</span>EMOS</div>
-				</a>
-				<a href="http://abitofcs.blogspot.sg" target="_blank">
-					<div class="menu-option" id="blog-pointer"><span style="color:#FFCF34;">B</span>LOG</div>
-				</a>
-				<a>
-					<div class="menu-option" id="contacts-pointer"><span style="color:#FFCF34;">CON</span>TACTS</div>
-				</a>
-			</div>
-		</div>
-		<div id="home" class="main-tab">
-			
-			<div id="home-bg-img">
-			</div>
-			<div id="home-title">
-				<div style="font-size:4.8em;letter-spacing:1px;"><span id="home-title-first" style="color:#FFCF34;top:30px;opacity:0;">Computer Science</span> Enthusiast</div>
-				<div style="margin-top:28px;letter-spacing:2px;"><span style="font-size:2.7em;">I build <span style="color:#FFCF34;">dreams</span></span></div>
-			</div>
-		</div>
-		<div id="projects" class="main-tab">
-			<div id="projects-sidetitle">
-				<div id="projects-sidetitle-content">
-					<span style="color:#FFCF34;">PRO</span>JECTS
+				<div id="projects-navigation">
+					<div class="projects-wrapper" id="desktop-projects-wrapper">
+						
+					</div>
+				</div>
+				<div class="projects-navigation-left">
+					<div class="projects-navigation-button-wrapper">
+						<img src="img/backward.png"></img>
+					</div>
+				</div>
+				<div class="projects-navigation-right">
+					<div class="projects-navigation-button-wrapper">
+						<img src="img/forward.png"></img>
+					</div>
 				</div>
 			</div>
-			<div id="projects-navigation">
-				<div id="projects-wrapper">
-					
+			<div id="demos" class="main-tab">
+				<div id="demos-sidetitle">
+					<div id="demos-sidetitle-content">
+						<span style="color:#FFCF34;">D</span>EMOS
+					</div>
 				</div>
-			</div>
-			<div class="projects-navigation-left">
-				<div class="projects-navigation-button-wrapper">
-					<img src="img/backward.png"></img>
+				<div id="demos-navigation">
+					<div class="demos-wrapper" id="desktop-demos-wrapper">
+						
+					</div>
 				</div>
-			</div>
-			<div class="projects-navigation-right">
-				<div class="projects-navigation-button-wrapper">
-					<img src="img/forward.png"></img>
+				<div class="projects-navigation-left">
+					<div class="projects-navigation-button-wrapper">
+						<img src="img/backward.png"></img>
+					</div>
 				</div>
-			</div>
-		</div>
-		<div id="demos" class="main-tab">
-			<div id="demos-sidetitle">
-				<div id="demos-sidetitle-content">
-					<span style="color:#FFCF34;">D</span>EMOS
+				<div class="projects-navigation-right">
+					<div class="projects-navigation-button-wrapper">
+						<img src="img/forward.png"></img>
+					</div>
 				</div>
-			</div>
-			<div id="demos-navigation">
-				<div id="demos-wrapper">
-					
-				</div>
-			</div>
-			<div class="projects-navigation-left">
-				<div class="projects-navigation-button-wrapper">
-					<img src="img/backward.png"></img>
-				</div>
-			</div>
-			<div class="projects-navigation-right">
-				<div class="projects-navigation-button-wrapper">
-					<img src="img/forward.png"></img>
-				</div>
-			</div>
 
-		</div>
-		<div id="contacts" class="main-tab">
-			<div id="contacts-sidetitle">
-				<div id="contacts-sidetitle-content">
-					<span style="color:#FFCF34;">CON</span>TACTS
+			</div>
+			<div id="contacts" class="main-tab">
+				<div id="contacts-sidetitle">
+					<div id="contacts-sidetitle-content">
+						<span style="color:#FFCF34;">CON</span>TACTS
+					</div>
+				</div>
+				<div id="contacts-wrapper">
+					<div id="contacts-title">
+						About <span style="color:#FFCF34">Prajogo Tio</span>
+					</div>
+					<div id="contacts-description">
+						<p>I studied at Nanyang Technological University. I graduated with a bachelor's degree in Computer Science and a master's degree in Technological Management.</p>
+						<p>My interests are in web and mobile apps development (both front-end and back-end), software engineering, game/graphics programming, distributed systems, algorithm and data structure research, and UI/UX design.</p>
+						<p>"All it takes is discipline, curiosity, humility to know what you don't know, and energy to find out."</p>
+					</div>
+					<div id="contacts-list">
+						<div class="contacts-option">
+							<a href="https://plus.google.com/+PrajogoTio" style="color:#FFCF34;">
+								<div class="contacts-option-thumbnail"><img src="img/gmail.png"></img></div>
+								<div class="contacts-option-caption">prajogotio@gmail.com</div>
+							</a>
+						</div>
+						<div class="contacts-option">
+							<a href="http://abitofcs.blogspot.sg" style="color:#FFCF34;">
+								<div class="contacts-option-thumbnail"><img src="img/blogspot-icon.png"></img></div>
+								<div class="contacts-option-caption">abitofcs.blogspot.sg</div>
+							</a>
+						</div>
+						<div class="contacts-option">
+							<a href="https://www.facebook.com/prayogo.tio" style="color:#FFCF34;">
+								<div class="contacts-option-thumbnail"><img src="img/facebook.png"></img></div>
+								<div class="contacts-option-caption">facebook</div>
+							</a>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div id="contacts-wrapper">
-				<div id="contacts-title">
-					About <span style="color:#FFCF34">Prajogo Tio</span>
-				</div>
-				<div id="contacts-description">
-					<p>I am student at Nanyang Technological University, Singapore, under the generous Nanyang Scholarship. I am enrolled in a scholars programme called Renaissance Engineering Programme, in which I am currently pursuing a Bachelor's Degree in Computer Engineering (B. Eng. Sc. Computer Engineering) and a Master's Degree in Technological Management (M. Sc. Technological Management).</p>
-					<p>My interests are in web and mobile apps development (both front-end and back-end), software engineering, enterprise-scale software development, algorithm and data structure research, and UI/UX design. I have a keen eye in design patterns, intuitive and elegant design, and solving difficult development problems by applying good design principles, efficient algorithms, and data structures.</p>
-					<p>I frequently join competitive programming events to deepen my knowledge and understanding on algorithms and data structures. I love to spend my time developing side projects in game programming, graphics programming, web apps development and design, and anything that catch my attention. I love hackathon experiences.</p>
-					<p>As I have background in hardcore, true-blue engineering disciplines (electrical, chemical, mechanical, civil and power engineering), I have strong mathematical and physics foundations. I am also trained in the business and management sides with background in corporate finance, accountancy, and business law.</p>
-					<p>"All it takes is discipline, curiosity, humility to know what you don't know, and energy to find out." - Me</p>
-				</div>
-				<div id="contacts-list">
-					<div class="contacts-option">
-						<a href="https://plus.google.com/+PrajogoTio" style="color:#FFCF34;">
-							<div class="contacts-option-thumbnail"><img src="img/gmail.png"></img></div>
-							<div class="contacts-option-caption">prajogotio@gmail.com</div>
-						</a>
-					</div>
-					<div class="contacts-option">
-						<a href="http://abitofcs.blogspot.sg" style="color:#FFCF34;">
-							<div class="contacts-option-thumbnail"><img src="img/blogspot-icon.png"></img></div>
-							<div class="contacts-option-caption">abitofcs.blogspot.sg</div>
-						</a>
-					</div>
-					<div class="contacts-option">
-						<a href="https://www.facebook.com/prayogo.tio" style="color:#FFCF34;">
-							<div class="contacts-option-thumbnail"><img src="img/facebook.png"></img></div>
-							<div class="contacts-option-caption">facebook</div>
-						</a>
-					</div>
-				</div>
+		</div>
+	</div>
+
+	<div id="mobile-version">
+		<div id="m-landing" style="margin-top:80px">
+			<div id="m-header" style="text-align:right">
+				<span style="color:#3088CC">prajogotio</span>.github.io
+			</div>
+			<div style="font-size:1.6em;letter-spacing:1px;">Computer Science Enthusiast</div>
+			<div style="margin-top:28px;letter-spacing:2px;"><span style="font-size:3.1em;">I build <span style="color:#3088CC;">dreams</span></span></div>
+		</div>
+		<div id="m-menu">
+			<a href="http://abitofcs.blogspot.sg">Blog</a>
+			<a href="#m-projects">Projects</a>
+			<a href="#m-demos">Demos</a>
+			<a href="#m-about">About</a>
+			<div style="clear:both"></div>
+		</div>
+
+		<div class="m-section-wrapper" id="m-projects">
+			<div class="m-section-title">
+				Projects
+			</div>
+			<div class="projects-wrapper">
 			</div>
 		</div>
+
+		<div class="m-section-wrapper" id="m-demos">
+			<div class="m-section-title">
+				Demos
+			</div>
+			<div class="demos-wrapper">
+			</div>
+		</div>
+
+		<div class="m-section-wrapper" id="m-about">
+			<div class="m-section-title">
+				About
+			</div>
+			<div id="m-contacts-description">
+				<p>I studied at Nanyang Technological University. I graduated with a bachelor's degree in Computer Science and a master's degree in Technological Management.</p>
+				<p>My interests are in web and mobile apps development (both front-end and back-end), software engineering, game/graphics programming, distributed systems, algorithm and data structure research, and UI/UX design.</p>
+				<p>"All it takes is discipline, curiosity, humility to know what you don't know, and energy to find out."</p>
+			</div>
+			<div id="m-contacts-list">
+				<div class="contacts-option">
+					<a href="https://plus.google.com/+PrajogoTio">
+						<div class="contacts-option-thumbnail"><img src="img/gmail.png"></img></div>
+						<div class="contacts-option-caption">prajogotio@gmail.com</div>
+					</a>
+				</div>
+				<div class="contacts-option">
+					<a href="http://abitofcs.blogspot.sg">
+						<div class="contacts-option-thumbnail"><img src="img/blogspot-icon.png"></img></div>
+						<div class="contacts-option-caption">abitofcs.blogspot.sg</div>
+					</a>
+				</div>
+				<div class="contacts-option">
+					<a href="https://www.facebook.com/prayogo.tio">
+						<div class="contacts-option-thumbnail"><img src="img/facebook.png"></img></div>
+						<div class="contacts-option-caption">facebook</div>
+					</a>
+				</div>
+			</div>
 	</div>
 </body>
 </html>

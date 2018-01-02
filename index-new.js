@@ -6,8 +6,8 @@ var states = {
 };
 
 $(document).ready(function() {
-	states.demos = $("#demos-wrapper")[0];
-	states.projects = $("#projects-wrapper")[0];
+	states.demos = $(".demos-wrapper");
+	states.projects = $(".projects-wrapper");
 	initializeMenu();
 
 	$(window).on("scroll", function(e) {
@@ -110,11 +110,11 @@ function enter(tab) {
 		$("#home-title").css({"opacity":"1"});
 		$("#home-title-first").css({"opacity" : "1", "top" : "0px"});
 	} else if (tab == "#projects") {
-		$("#projects-wrapper").css({"opacity" : "1"});
+		$("#desktop-projects-wrapper").css({"opacity" : "1"});
 		$("#projects-sidetitle-content").css({"opacity" : "1", "left" : "10px"});
 		$("#projects-pointer").css({"background-color" : "#998F34"});
 	} else if (tab == "#demos" ) {
-		$("#demos-wrapper").css({"opacity" : "1"});
+		$("#desktop-demos-wrapper").css({"opacity" : "1"});
 		$("#demos-sidetitle-content").css({"opacity" : "1", "left" : "10px"});
 		$("#demos-pointer").css({"background-color" : "#998F34"});
 	} else if (tab == "#contacts" ) {
@@ -130,12 +130,12 @@ function leave(tab) {
 		$("#home-title").css({"opacity":"0"});
 		$("#home-title-first").css({"opacity" : "0", "top" : "30px"});
 	} else if(tab=="#projects"){
-		$("#projects-wrapper").css({"opacity" : "0"});
+		$("#desktop-projects-wrapper").css({"opacity" : "0"});
 		$("#projects-sidetitle-content").css({"opacity" : "0", "left" : "40px"});
 		$("#projects-pointer").css({"background-color" : ""});
 
 	}else if(tab == "#demos") {
-		$("#demos-wrapper").css({"opacity" : "0"});
+		$("#desktop-demos-wrapper").css({"opacity" : "0"});
 		$("#demos-sidetitle-content").css({"opacity" : "0", "left" : "40px"});
 		$("#demos-pointer").css({"background-color" : ""});
 	}else if(tab == "#contacts") {
@@ -200,7 +200,12 @@ function initializeDS() {
     for (var i = 0; i < Demos.length; ++i) {
         dsMenu += renderAsOption(Demos[i], i%2);
     }
-    states.demos.innerHTML = dsMenu;
+    states.demos[0].innerHTML = dsMenu;
+    dsMenu = "";
+    for (var i = 0; i < Demos.length; ++i) {
+        dsMenu += renderAsOption(Demos[i], 0);
+    }
+    states.demos[1].innerHTML = dsMenu;
 }
 
 function initializeProjects(){
@@ -208,7 +213,12 @@ function initializeProjects(){
     for (var i = 0; i < Projects.length; ++i) {
         projMenu += renderAsOption(Projects[i], i%2);
     }
-    states.projects.innerHTML = projMenu;
+    states.projects[0].innerHTML = projMenu;
+    projMenu = "";
+    for (var i = 0; i < Projects.length; ++i) {
+        projMenu += renderAsOption(Projects[i], 0);
+    }
+    states.projects[1].innerHTML = projMenu;
 }
 
 function renderAsOption(opt, type){
